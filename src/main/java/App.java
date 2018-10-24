@@ -37,11 +37,11 @@ public class App {
         post("/addAnimal", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             String name = request.queryParams("name");
+            String location = request.queryParams("location);
+            String health= request.queryParams("health");
+            String status= request.queryParams("status");
+            String timestamp= request.queryParams("timestamp");
             String ranger = request.queryParams("ranger");
-            String age = request.queryParams("age");
-            String location = request.queryParams("location");
-            String health = request.queryParams("health");
-            String status = request.queryParams("status");
             Animal newAnimal = new Animal(name, ranger, age, location, health, status);
             newAnimal.save();
             response.redirect("/");
