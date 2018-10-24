@@ -1,0 +1,93 @@
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6">
+
+    <!-- Default form login -->
+
+    <form class="text-center border border-light p-5">
+
+        <p class="h4 mb-4">Wildlife Tracker</p>
+
+        <input type="text" id="name" class="form-control mb-4" placeholder="First Name" name="Name">
+
+        <input type="text" id="location" class="form-control mb-4" placeholder="Location">
+
+        <input type="text" id="health" class="form-control mb-4" placeholder="Health">
+
+        <input type="text" id="status" class="form-control mb-4" placeholder="Status">
+
+        <input type="text" id="Timstamp" class="form-control mb-4" placeholder="Timestamp">
+
+        <input type="text" id="ranger" class="form-control mb-4" placeholder="ranger">
+
+        <div class="d-flex justify-content-around">
+
+        </div>
+
+        <!-- Sign in button -->
+
+        <button class="btn btn-info btn-block my-4" type="submit">Submit</button>
+
+    </form>
+
+    <!-- Default form login -->
+
+</div>
+
+<div class="col-md-6">
+
+    <table class="table table-striped">
+
+      <thead>
+
+        <tr>
+
+          <th scope="col">Name</th>
+
+          <th scope="col">Location</th>
+
+          <th scope="col">Health</th>
+
+          <th scope="col">Status</th>
+
+          <th scope="col">Timestamp</th>
+
+          <th scope="col">Ranger</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+      #foreach ($animal in $animals)
+
+        <tr>
+
+          <td>$animal.getName()</td>
+
+          <td>$animal.getLocation()</td>
+
+          <td>$animal.getHealth()</td>
+
+          <td>$animal.getStatus()</td>
+
+          <td>$animal.getTimestamp()</td>
+
+          <td>$animal.getRanger()</td>
+
+        </tr>
+
+        #end
+
+      </tbody>
+
+    </table>
+
+</div>
+
+</div>
+
+</div>
